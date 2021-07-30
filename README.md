@@ -10,6 +10,7 @@
 - Lists are very similar to arrays. They can contain any type of variable, and they can contain as many variables as you wish. Lists can also be iterated over  in a very simple manner
 - List is declared in following manner - e.g. mylist = [];
 - Listname.append(*val*) method is used to add a value to the end of the list.
+- List methods can be accessed from [here](https://www.w3schools.com/python/python_ref_list.asp).
 
 ### ARITHEMATIC OPERATIONS
 - Just as any other programming languages, the addition, subtraction, multiplication, and division operators can be used with numbers.
@@ -45,15 +46,15 @@
             print(prime)
             // this code prints the values in the list.
     - *range()* and *xrange()* in for loop provide for iterating over a certain range.
-        1. # Prints out the numbers 0,1,2,3,4
+        1.  Prints out the numbers 0,1,2,3,4
             for x in range(5):
             print(x)
 
-        2. # Prints out 3,4,5
+        2.  Prints out 3,4,5
             for x in range(3, 6):
             print(x)
 
-        3. # Prints out 3,5,7
+        3.  Prints out 3,5,7
             for x in range(3, 8, 2):
             print(x)
 
@@ -62,6 +63,44 @@
 
 ### FUNCTIONS IN PYTHON
 - *def* keyword is used to define a function.
+- We can create an object as a return value or can perform any printing actions.
+
+### CLASSES IN PYTHON
+- Object can be called an encapsulated entity of member functions and variables. These objects, instead of being created everytime, can be called as an instanece of class. 
+- Class can be defined as the collection of member functions and variables from which instances(objects) can be created. 
+- exempler code for better understanding of how to use class
+    - code:
+        -   // define the Vehicle class
+            class Vehicle:
+            name = ""
+            kind = "car"
+            color = ""
+            value = 100.00
+            def description(self):
+            desc_str = "%s is a %s %s worth $%.2f." % (self.name, self.color, self.kind, self.value)
+            return desc_str
+
+            //your code goes here
+            car1 = Vehicle()
+            car1.name = "Fer"
+            car1.color = "red"
+            car1.kind = "convertible"
+            car1.value = 60000.00
+            //test code
+            print(car1.description())
+
+### DICTIONARIES IN PYTHON
+- A dictionary is a data type similar to arrays, but works with keys and values instead of indexes. Each value stored in a dictionary can be accessed using a   key, which is any type of object (a string, a number, a list, etc.) instead of using its index to address it. 
+- for eg.
+    -   phonebook = {}
+        phonebook["John"] = 938477566
+        phonebook["Jack"] = 938377264
+        phonebook["Jill"] = 947662781
+        print(phonebook)
+
+
+              After these, we need to move on to python libraries - numpy, matlplotlib, pandas etc,.
+    For writing this resource, the following website have been used - [pyhton-learn](https://www.learnpython.org/en/Welcome).
 
 
 
