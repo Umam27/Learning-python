@@ -100,7 +100,7 @@
 
 
               After these, we need to move on to python libraries - numpy, matlplotlib, pandas etc,.
-    For writing this resource, the following website have been used - [pyhton-learn](https://www.learnpython.org/en/Welcome).
+    For writing this resource, the following website have been used - [python-learn](https://www.learnpython.org/en/Welcome).
 
 
 
