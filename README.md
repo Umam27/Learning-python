@@ -70,7 +70,9 @@
 - Class can be defined as the collection of member functions and variables from which instances(objects) can be created. 
 - exempler code for better understanding of how to use class
     - code:
-        -   // define the Vehicle class
+        ~~~
+        {
+           // define the Vehicle class
             class Vehicle:
             name = ""
             kind = "car"
@@ -88,6 +90,8 @@
             car1.value = 60000.00
             //test code
             print(car1.description())
+        }
+        ~~~
 
 ### DICTIONARIES IN PYTHON
 - A dictionary is a data type similar to arrays, but works with keys and values instead of indexes. Each value stored in a dictionary can be accessed using a   key, which is any type of object (a string, a number, a list, etc.) instead of using its index to address it. 
