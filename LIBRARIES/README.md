@@ -34,3 +34,52 @@
 
     These resources can be read in more-depth from [here](https://www.w3schools.com/python/numpy/numpy_intro.asp)
 
+# PANDAS LIBRARY
+- Pandas is a Python library used for working with data sets.
+- For installing pandas libraries, type the command *pip install pandas.
+- Getting it inside your code, we need to type - *import pandas* or *import pandas as pd* (this method shortens the need to use keyword numpy everytime).
+
+#### Pandas Series
+- A Pandas Series is like a column in a table.
+- It is a one-dimensional array holding data of any type.
+- eg. code 
+        ~~~
+        import pandas as pd
+        a = [1, 7, 2]
+        myvar = pd.Series(a)
+        print(myvar)
+        ~~~
+
+- **LABELS** are customized index defined for the series values. By default 0 - based indexing is used to access the series values. By passing the index parameter in the .series method we can define labels for the series. In case of making series from dictionaries, the key of the dictionary becomes its label. 
+
+#### Dataframes
+- A Pandas DataFrame is a 2 dimensional data structure, like a 2 dimensional array, or a table with rows and columns.
+- **loc** attribute helps in returning the required row.
+
+- pd.dataframe(data_name) is used to construct a dataframe
+- eg. code 
+    ~~~
+    import pandas as pd
+    data = { "calories": [420, 380, 390], "duration": [50, 40, 45] }
+    //load data into a DataFrame object:
+    df = pd.DataFrame(data)
+    print(df) 
+    ~~~
+
+#### Read CSV file .
+- It is inconvinient to write a big lot of data file inside a code. Hence we can take a seperated data.csv file into the code.
+- pd.read_csv('csv_file_name.csv') method helps to creat a dataframe from the given data.
+- Printig more than 10 values doesnt print all, instead it prints first 5 and last 5 values. To print all the values, *.to_string()* method is used.
+
+#### Read JSON file.
+- JSON files and datas are exactly read and handled as of the CSV.
+- JSON file data is similar to dictionary.
+
+#### DATA analysis by pandas.
+- .head(n) -> prints first n rows.
+- .tail(n) -> prints last n rows.
+- .info() -> prints info about the data.
+
+More methods such as .dropna(), .fillna() are used to clean-up the data.
+    More can be accessed from [here](https://www.w3schools.com/python/pandas/pandas_intro.asp).
+    
