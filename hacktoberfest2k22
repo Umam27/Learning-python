@@ -1,0 +1,67 @@
+//LCS
+#include<bits/stdc++.h>
+using namespace std;
+#define Fast_io ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+typedef long long ll;
+    
+
+void solver_kingsman(){
+    ll h , w;
+    cin >> h >> w;
+    ll arr[h][w] , dp[h+1][w+1];
+    for(ll i=0; i<=h; i++){
+        for(ll j=0; j<=w; j++){
+            dp[i][j] = 0;
+        }
+    }
+    ll hash_cnt = 0;
+    for(ll i = 0; i < h; i++){
+        for(ll j = 0; j < w; j++){
+            char c;
+            cin >> c;
+            if(c == '.') arr[i][j] = 0; 
+            else{
+                hash_cnt++;
+                arr[i][j] = 1;
+            }
+        }
+    }
+    if(!hash_cnt){
+        cout << h+w - 1 << endl;
+        return;
+    }
+    dp[1][1] = 1;
+    for(ll i = 1 ; i <= h; i++){
+        for(ll j = 1 ; j <= w; j++){
+            if(arr[i-1][j-1] == 0)  dp[i][j] = max(dp[i-1][j] , dp[i][j-1]) + 1;
+        }
+    }
+
+    for(ll i = 1 ; i <= h; i++){
+        for(ll j = 1 ; j <= w; j++){
+            cout << dp[i][j]<<" ";
+        }
+        cout << endl;
+    }
+    ll max = INT_MIN;
+    for(ll i = 1 ; i <= h; i++){
+        for(ll j = 1 ; j <= w; j++){
+            if(dp[i][j] > max){
+                max = dp[i][j];
+            }
+        }
+    }
+    cout << max<< endl;return;
+}
+    
+
+int main(){
+    Fast_io
+    
+
+    ll test = 1;
+    while(test --){
+        solver_kingsman();
+    }
+    return 0;
+}
